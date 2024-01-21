@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Example</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4nBE0t3K4PZjXD/GLDnvJSR9MIHKxjUK"
+        crossorigin="anonymous">
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-pzjw8c+QD5gE5vK9ctovW+awXlLnBsp5wr+3B/6lQ8WIqDl6IvvU5ZDkdrP2eQeb"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4nBE0t3K4PZjXD/GLDnvJSR9MIHKxjUK"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="addUser/" method="post">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Please enter name"
+                                required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="age" name="age"
+                                placeholder="Please enter age" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="phone">Phone</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="Please enter phone" required>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="address">Address</label>
+                            <textarea class="form-control" id="address" name="address"
+                                placeholder="Please enter address" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" name="submit" value="Submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
